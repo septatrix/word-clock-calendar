@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        :root {
+            background-color: black;
+            color: white;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            place-content: center;
+        }
+
+        #calendar {
+            display: grid;
+            grid-template-columns: repeat(calc(12*13), auto);
+            /* gap: .2em; */
+            width: 40em;
+            height: 20em;
+            font-family: monospace;
+            font-size: 3em;
+            font-weight: bold;
+            place-items: center;
+            justify-content: space-between;
+        }
+
+        #calendar>.day {
+            grid-column: span 12;
+        }
+
+        #calendar>.month {
+            grid-column: span 13;
+        }
+
+        .day-row {
+            display: grid;
+            grid-column: 1 / -1;
+            grid-template-columns: subgrid;
+            place-items: center;
+        }
+
+        .month-wrapper {
+            grid-column: 1 / -1;
+        }
+
+        .month-row {
+            display: grid;
+            grid-template-columns: repeat(12, auto);
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="calendar">
+        <!-- <div class="day-row"> -->
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">1</span>
+        <span class="day">2</span>
+        <span class="day">3</span>
+        <span class="day">4</span>
+        <span class="day">5</span>
+        <span class="day">6</span>
+        <span class="day">7</span>
+        <!-- </div> -->
+        <!-- <div class="day-row"> -->
+        <span class="day">2</span>
+        <span class="day">3</span>
+        <span class="day">4</span>
+        <span class="day">5</span>
+        <span class="day">6</span>
+        <span class="day">7</span>
+        <span class="day">8</span>
+        <span class="day">9</span>
+        <span class="day">10</span>
+        <span class="day">11</span>
+        <span class="day">12</span>
+        <span class="day">13</span>
+        <span class="day">14</span>
+        <!-- </div> -->
+        <!-- <div class="day-row"> -->
+        <span class="day">9</span>
+        <span class="day">10</span>
+        <span class="day">11</span>
+        <span class="day">12</span>
+        <span class="day">13</span>
+        <span class="day">14</span>
+        <span class="day">15</span>
+        <span class="day">16</span>
+        <span class="day">17</span>
+        <span class="day">18</span>
+        <span class="day">19</span>
+        <span class="day">20</span>
+        <span class="day">21</span>
+        <!-- </div> -->
+        <!-- <div class="day-row"> -->
+        <span class="day">16</span>
+        <span class="day">17</span>
+        <span class="day">18</span>
+        <span class="day">19</span>
+        <span class="day">20</span>
+        <span class="day">21</span>
+        <span class="day">22</span>
+        <span class="day">23</span>
+        <span class="day">24</span>
+        <span class="day">25</span>
+        <span class="day">26</span>
+        <span class="day">27</span>
+        <span class="day">28</span>
+        <!-- </div> -->
+        <!-- <div class="day-row"> -->
+        <span class="day">23</span>
+        <span class="day">24</span>
+        <span class="day">25</span>
+        <span class="day">26</span>
+        <span class="day">27</span>
+        <span class="day">28</span>
+        <span class="day">29</span>
+        <span class="day">30</span>
+        <span class="day">31</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <!-- </div> -->
+        <!-- <div class="day-row"> -->
+        <span class="day">30</span>
+        <span class="day">31</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <span class="day">·</span>
+        <!-- </div> -->
+        <!-- <div class="month-row"> -->
+        <span class="month">Jan</span>
+        <span class="month">Feb</span>
+        <span class="month">Mar</span>
+        <span class="month">Apr</span>
+        <span class="month">May</span>
+        <span class="month">Jun</span>
+        <span class="month">Jul</span>
+        <span class="month">Aug</span>
+        <span class="month">Sep</span>
+        <span class="month">Oct</span>
+        <span class="month">Nov</span>
+        <span class="month">Dec</span>
+        <!-- </div> -->
+    </div>
+</body>
+
+</html>

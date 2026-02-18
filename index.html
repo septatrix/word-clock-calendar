@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Clock/Calendar</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+
+  <body>
+    <div id="calendar">
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="day">1</span>
+      <span class="day">2</span>
+      <span class="day">3</span>
+      <span class="day">4</span>
+      <span class="day">5</span>
+      <span class="day">6</span>
+      <span class="day">7</span>
+      <!-- line break -->
+      <span class="day">2</span>
+      <span class="day">3</span>
+      <span class="day">4</span>
+      <span class="day">5</span>
+      <span class="day">6</span>
+      <span class="day">7</span>
+      <span class="day">8</span>
+      <span class="day">9</span>
+      <span class="day">10</span>
+      <span class="day">11</span>
+      <span class="day">12</span>
+      <span class="day">13</span>
+      <span class="day">14</span>
+      <!-- line break -->
+      <span class="day">9</span>
+      <span class="day">10</span>
+      <span class="day">11</span>
+      <span class="day">12</span>
+      <span class="day">13</span>
+      <span class="day">14</span>
+      <span class="day">15</span>
+      <span class="day">16</span>
+      <span class="day">17</span>
+      <span class="day">18</span>
+      <span class="day">19</span>
+      <span class="day">20</span>
+      <span class="day">21</span>
+      <!-- line break -->
+      <span class="day">16</span>
+      <span class="day">17</span>
+      <span class="day">18</span>
+      <span class="day">19</span>
+      <span class="day">20</span>
+      <span class="day">21</span>
+      <span class="day">22</span>
+      <span class="day">23</span>
+      <span class="day">24</span>
+      <span class="day">25</span>
+      <span class="day">26</span>
+      <span class="day">27</span>
+      <span class="day">28</span>
+      <!-- line break -->
+      <span class="day">23</span>
+      <span class="day">24</span>
+      <span class="day">25</span>
+      <span class="day">26</span>
+      <span class="day">27</span>
+      <span class="day">28</span>
+      <span class="day">29</span>
+      <span class="day">30</span>
+      <span class="day">31</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <!-- line break -->
+      <span class="day">30</span>
+      <span class="day">31</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+
+      <div class="month-row">
+        <span class="month">Jan</span>
+        <span class="month">Feb</span>
+        <span class="month">Mar</span>
+        <span class="month">Apr</span>
+        <span class="month">May</span>
+        <span class="month">Jun</span>
+        <span class="month">Jul</span>
+        <span class="month">Aug</span>
+        <span class="month">Sep</span>
+        <span class="month">Oct</span>
+        <span class="month">Nov</span>
+        <span class="month">Dec</span>
+      </div>
+    </div>
+
+    <div id="clock-en" hidden>
+      <span class="it">I</span>
+      <span class="it">T</span>
+      <span>M</span>
+      <span class="is">I</span>
+      <span class="is">S</span>
+      <span>I</span>
+      <span>A</span>
+      <span class="half">H</span>
+      <span class="half">A</span>
+      <span class="half">L</span>
+      <span class="half">F</span>
+      <!-- line break -->
+      <span class="twenty">T</span>
+      <span class="twenty">W</span>
+      <span class="twenty">E</span>
+      <span class="twenty">N</span>
+      <span class="twenty">T</span>
+      <span class="twenty">Y</span>
+      <span class="dash">-</span>
+      <span class="five-minute">F</span>
+      <span class="five-minute">I</span>
+      <span class="five-minute">V</span>
+      <span class="five-minute">E</span>
+      <!-- line break -->
+      <span>C</span>
+      <span class="ten-minute">T</span>
+      <span class="ten-minute">E</span>
+      <span class="ten-minute">N</span>
+      <span class="quarter">Q</span>
+      <span class="quarter">U</span>
+      <span class="quarter">A</span>
+      <span class="quarter">R</span>
+      <span class="quarter">T</span>
+      <span class="quarter">E</span>
+      <span class="quarter">R</span>
+      <!-- line break -->
+      <span>H</span>
+      <span>A</span>
+      <span class="past">P</span>
+      <span class="past">A</span>
+      <span class="past">S</span>
+      <span class="past">T</span>
+      <span class="to">T</span>
+      <span class="to">O</span>
+      <span>E</span>
+      <span>L</span>
+      <span>K</span>
+      <!-- line break -->
+      <span class="one">O</span>
+      <span class="one">N</span>
+      <span class="one">E</span>
+      <span class="two">T</span>
+      <span class="two">W</span>
+      <span class="two">O</span>
+      <span class="three">T</span>
+      <span class="three">H</span>
+      <span class="three">R</span>
+      <span class="three">E</span>
+      <span class="three">E</span>
+      <!-- line break -->
+      <span class="seven">S</span>
+      <span class="seven">E</span>
+      <span class="seven">V</span>
+      <span class="seven">E</span>
+      <span class="seven">N</span>
+      <span class="twelve">T</span>
+      <span class="twelve">W</span>
+      <span class="twelve">E</span>
+      <span class="twelve">L</span>
+      <span class="twelve">V</span>
+      <span class="twelve">E</span>
+      <!-- line break -->
+      <span>O</span>
+      <span>L</span>
+      <span class="eight">E</span>
+      <span class="eight">I</span>
+      <span class="eight">G</span>
+      <span class="eight">H</span>
+      <span class="eight">T</span>
+      <span class="six">S</span>
+      <span class="six">I</span>
+      <span class="six">X</span>
+      <span>B</span>
+      <!-- line break -->
+      <span class="five">F</span>
+      <span class="five">I</span>
+      <span class="five">V</span>
+      <span class="five">E</span>
+      <span>E</span>
+      <span>R</span>
+      <span class="four">F</span>
+      <span class="four">O</span>
+      <span class="four">U</span>
+      <span class="four">R</span>
+      <span>M</span>
+      <!-- line break -->
+      <span>I</span>
+      <span class="eleven">E</span>
+      <span class="eleven">L</span>
+      <span class="eleven">E</span>
+      <span class="eleven">V</span>
+      <span class="eleven">E</span>
+      <span class="eleven">N</span>
+      <span class="nine">N</span>
+      <span class="nine">I</span>
+      <span class="nine">N</span>
+      <span class="nine">E</span>
+      <!-- line break -->
+      <span class="ten">T</span>
+      <span class="ten">E</span>
+      <span class="ten">N</span>
+      <span>C</span>
+      <span class="oclock">O</span>
+      <span class="oclock">'</span>
+      <span class="oclock">C</span>
+      <span class="oclock">L</span>
+      <span class="oclock">O</span>
+      <span class="oclock">C</span>
+      <span>K</span>
+      <!-- line break -->
+      <span class="forty">F</span>
+      <span class="forty">O</span>
+      <span class="forty">R</span>
+      <span class="forty">T</span>
+      <span class="forty">Y</span>
+      <span>H</span>
+      <span>A</span>
+      <span class="am">A</span>
+      <span class="am">M</span>
+      <span class="pm">P</span>
+      <span class="pm">M</span>
+    </div>
+
+    <div id="clock-de">
+      <span class="es">E</span>
+      <span class="es">S</span>
+      <span>K</span>
+      <span class="ist">I</span>
+      <span class="ist">S</span>
+      <span class="ist">T</span>
+      <span>A</span>
+      <span class="fuenf-min">F</span>
+      <span class="fuenf-min">Ü</span>
+      <span class="fuenf-min">N</span>
+      <span class="fuenf-min">F</span>
+
+      <span class="zehn-min">Z</span>
+      <span class="zehn-min">E</span>
+      <span class="zehn-min">H</span>
+      <span class="zehn-min">N</span>
+      <span class="zwanzig">Z</span>
+      <span class="zwanzig">W</span>
+      <span class="zwanzig">A</span>
+      <span class="zwanzig">N</span>
+      <span class="zwanzig">Z</span>
+      <span class="zwanzig">I</span>
+      <span class="zwanzig">G</span>
+      <!-- line break -->
+      <span class="drei dreiviertel">D</span>
+      <span class="drei dreiviertel">R</span>
+      <span class="drei dreiviertel">E</span>
+      <span class="drei dreiviertel">I</span>
+      <span class="viertel dreiviertel">V</span>
+      <span class="viertel dreiviertel">I</span>
+      <span class="viertel dreiviertel">E</span>
+      <span class="viertel dreiviertel">R</span>
+      <span class="viertel dreiviertel">T</span>
+      <span class="viertel dreiviertel">E</span>
+      <span class="viertel dreiviertel">L</span>
+      <!-- line break -->
+      <span class="vor">V</span>
+      <span class="vor">O</span>
+      <span class="vor">R</span>
+      <span>F</span>
+      <span>U</span>
+      <span>N</span>
+      <span>K</span>
+      <span class="nach">N</span>
+      <span class="nach">A</span>
+      <span class="nach">C</span>
+      <span class="nach">H</span>
+      <!-- line break -->
+      <span class="halb">H</span>
+      <span class="halb">A</span>
+      <span class="halb">L</span>
+      <span class="halb">B</span>
+      <span>A</span>
+      <span class="elf">E</span>
+      <span class="elf">L</span>
+      <span class="elf fuenf">F</span>
+      <span class="fuenf">Ü</span>
+      <span class="fuenf">N</span>
+      <span class="fuenf">F</span>
+      <!-- line break -->
+      <span class="eins">E</span>
+      <span class="eins">I</span>
+      <span class="eins">N</span>
+      <span class="eins">S</span>
+      <span>X</span>
+      <span>A</span>
+      <span>M</span>
+      <span class="zwei">Z</span>
+      <span class="zwei">W</span>
+      <span class="zwei">E</span>
+      <span class="zwei">I</span>
+      <!-- line break -->
+      <span class="drei">D</span>
+      <span class="drei">R</span>
+      <span class="drei">E</span>
+      <span class="drei">I</span>
+      <span>P</span>
+      <span>M</span>
+      <span>J</span>
+      <span class="vier">V</span>
+      <span class="vier">I</span>
+      <span class="vier">E</span>
+      <span class="vier">R</span>
+      <!-- line break -->
+      <span class="sechs">S</span>
+      <span class="sechs">E</span>
+      <span class="sechs">C</span>
+      <span class="sechs">H</span>
+      <span class="sechs">S</span>
+      <span>N</span>
+      <span>L</span>
+      <span class="acht">A</span>
+      <span class="acht">C</span>
+      <span class="acht">H</span>
+      <span class="acht">T</span>
+      <!-- line break -->
+      <span class="sieben">S</span>
+      <span class="sieben">I</span>
+      <span class="sieben">E</span>
+      <span class="sieben">B</span>
+      <span class="sieben">E</span>
+      <span class="sieben">N</span>
+      <span class="zwoelf">Z</span>
+      <span class="zwoelf">W</span>
+      <span class="zwoelf">Ö</span>
+      <span class="zwoelf">L</span>
+      <span class="zwoelf">F</span>
+      <!-- line break -->
+      <span class="zehn">Z</span>
+      <span class="zehn">E</span>
+      <span class="zehn">H</span>
+      <span class="zehn neun">N</span>
+      <span class="neun">E</span>
+      <span class="neun">U</span>
+      <span class="neun">N</span>
+      <span>K</span>
+      <span class="uhr">U</span>
+      <span class="uhr">H</span>
+      <span class="uhr">R</span>
+    </div>
+  </body>
+</html>

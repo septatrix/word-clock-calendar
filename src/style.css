@@ -1,0 +1,68 @@
+:root {
+  background-color: black;
+  color: white;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  font-family: monospace;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(13, auto);
+  /* gap: 1em; */
+  width: 30em;
+  height: 18em;
+  place-items: center;
+
+  .month-row {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(12, auto);
+    align-items: center;
+    justify-content: space-around;
+    justify-self: stretch;
+  }
+}
+
+#clock-de {
+  display: grid;
+  grid-template-columns: repeat(11, auto);
+  gap: 0.5em;
+  width: 30em;
+  height: 25em;
+  place-items: center;
+}
+
+span {
+  color: #222;
+}
+
+.active,
+.light {
+  text-shadow: 0 0 0.5em currentColor;
+}
+
+.active {
+  color: red;
+}
+
+.weekend {
+  color: green;
+}
+
+.today {
+  color: blue;
+}
+
+.light {
+  color: white;
+}

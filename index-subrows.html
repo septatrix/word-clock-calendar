@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Clock/Calendar</title>
+    <style>
+      :root {
+        background-color: black;
+        color: white;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+        display: grid;
+        place-content: center;
+      }
+
+      #calendar {
+        display: grid;
+        grid-template-columns: repeat(13, auto);
+        /* gap: 1em; */
+        width: 40em;
+        height: 20em;
+        font-family: monospace;
+        font-size: 3em;
+        font-weight: bold;
+      }
+
+      .day-row {
+        display: grid;
+        grid-column: 1 / -1;
+        grid-template-columns: subgrid;
+        place-items: center;
+      }
+
+      .month-row {
+        display: grid;
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(12, auto);
+        align-items: center;
+        justify-content: space-around;
+      }
+    </style>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+
+  <body>
+    <div id="calendar">
+      <div class="day-row">
+        <span>·</span>
+        <span>·</span>
+        <span>·</span>
+        <span>·</span>
+        <span>·</span>
+        <span>·</span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+      </div>
+      <div class="day-row">
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+        <span>13</span>
+        <span>14</span>
+      </div>
+      <div class="day-row">
+        <span>9</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+        <span>13</span>
+        <span>14</span>
+        <span>15</span>
+        <span>16</span>
+        <span>17</span>
+        <span>18</span>
+        <span>19</span>
+        <span>20</span>
+        <span>21</span>
+      </div>
+      <div class="day-row">
+        <span>16</span>
+        <span>17</span>
+        <span>18</span>
+        <span>19</span>
+        <span>20</span>
+        <span>21</span>
+        <span>22</span>
+        <span>23</span>
+        <span>24</span>
+        <span>25</span>
+        <span>26</span>
+        <span>27</span>
+        <span>28</span>
+      </div>
+      <div class="day-row">
+        <span>23</span>
+        <span>24</span>
+        <span>25</span>
+        <span>26</span>
+        <span>27</span>
+        <span>28</span>
+        <span>29</span>
+        <span>30</span>
+        <span>31</span>
+        <span>·</span>
+        <span>·</span>
+        <span>·</span>
+        <span>·</span>
+      </div>
+      <div class="day-row">
+        <span>30</span>
+        <span>31</span>
+        <span>·</span>
+        <span>·</span>
+        <span>·</span>
+        <span>·</span>
+        <span>·</span>
+        <span>·</span>
+        <span>·</span>
+        <span>·</span>
+        <span>·</span>
+        <span>·</span>
+        <span>·</span>
+      </div>
+      <div class="month-row">
+        <span>Jan</span>
+        <span>Feb</span>
+        <span>Mar</span>
+        <span>Apr</span>
+        <span>May</span>
+        <span>Jun</span>
+        <span>Jul</span>
+        <span>Aug</span>
+        <span>Sep</span>
+        <span>Oct</span>
+        <span>Nov</span>
+        <span>Dec</span>
+      </div>
+    </div>
+  </body>
+</html>
