@@ -5,14 +5,15 @@ const clock = document.getElementById("clock-de")!;
 
 function highlightMonth(month: Temporal.PlainYearMonth) {
   // Clear previous highlights
-  calendar.querySelectorAll(".active, .today, .weekend").forEach((active) => {
-    active.classList.remove("active", "today", "weekend");
+  calendar.querySelectorAll(".active, .current, .weekend").forEach((active) => {
+    active.classList.remove("active", "current", "weekend");
   });
 
+  const today = Temporal.Now.plainDateISO();
   // Highlight the month
   calendar
     .querySelector(`#calendar > .month-row > :nth-child(${month.month}).month`)
-    ?.classList.add("active");
+    ?.classList.add(today.month === month.month ? "current" : "active");
 
   const firstDayInMonth = month.toPlainDate({ day: 1 });
   const monthDays = calendar.querySelectorAll(
@@ -28,12 +29,11 @@ function highlightMonth(month: Temporal.PlainYearMonth) {
   );
 
   let currentDate = firstDayInMonth;
-  const today = Temporal.Now.plainDateISO();
   for (const day of monthDays) {
     day.classList.add("active");
 
     if (currentDate.equals(today)) {
-      day.classList.add("today");
+      day.classList.add("current");
     }
 
     if ([6, 7].includes(currentDate.dayOfWeek)) {
@@ -133,8 +133,13 @@ function highlightClock(now: Temporal.PlainTime) {
     12: ".zwoelf",
   } as const;
 
-  const hourClass = hourClasses[displayHour as keyof typeof hourClasses];
-  classesToEnable.push(hourClass);
+  if (displayHour === 1 && classesToEnable.includes(".uhr")) {
+    // Use "ein" for 1 o'clock instead of "eins"
+    classesToEnable.push(".ein");
+  } else {
+    const hourClass = hourClasses[displayHour as keyof typeof hourClasses];
+    classesToEnable.push(hourClass);
+  }
 
   // Update the clock display
   clock.querySelectorAll(`:not(${classesToEnable.join(",")})`).forEach((el) => {
